@@ -29,9 +29,9 @@ POWERLEVEL9K_ETC_ICON="\uf013"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 #Here is wher I set the color scheme of icons
-POWERLEVEL9K_DIR_HOME_BACKGROUND="038"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='038'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='038'
+POWERLEVEL9K_DIR_HOME_BACKGROUND="177"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='177'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='177'
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='197'
 
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
@@ -44,7 +44,7 @@ POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="blue"
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
 
 POWERLEVEL9K_TIME_BACKGROUND='255'
-#POWERLEVEL9K_COMMAND_TIME_FOREGROUND='gray'
+POWERLEVEL9K_COMMAND_TIME_FOREGROUND='gray'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='245'
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='black'
 
@@ -63,4 +63,15 @@ plugins=(gitfast colored-man command-not-found cp dirhistory autojump sudo zsh-a
 # Runs the shell command
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Genymotion.app/Contents/MacOS/tools/:/Users/unclear/.vimpkg/bin"
+#location of the zsh highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'

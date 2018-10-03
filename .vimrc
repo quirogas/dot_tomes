@@ -32,7 +32,7 @@ let g:airline_mode_map = {
       \ 'r'  : "\ufbd2 更換", 
       \ 'R'  : "\ufbd2 更換", 
       \ 'v'  : "\ufbce 비쥬얼", 
-      \ 'V'  : '\ufbce 비쥬얼"',
-      \ '' : '\ufbce 비쥬얼',
+      \ 'V'  : "\ufbce 비쥬얼",
+      \ '' : "\ufbce 비쥬얼",
       \ }
 
