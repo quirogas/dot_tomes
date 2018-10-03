@@ -26,7 +26,7 @@ set t_Co=256
 "Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-  let g:airline_mode_map = {
+let g:airline_mode_map = {
       \ 'n'  : "\ue28b  عادي", 
       \ 'i'  : "\ufb4e インサート", 
       \ 'r'  : "\ufbd2 更換", 
