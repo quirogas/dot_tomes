@@ -28,11 +28,17 @@ POWERLEVEL9K_ETC_ICON="\uf013"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-#Here is wher I set the color scheme of icons
+#Set the background color for specific segments
 POWERLEVEL9K_DIR_HOME_BACKGROUND="177"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='177'
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='177'
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='197'
+
+#VCS segment customization
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='48'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='202'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='229'
+
 
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
@@ -58,7 +64,7 @@ COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
 # /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
-plugins=(gitfast colored-man command-not-found cp dirhistory autojump sudo zsh-autosuggestions zsh-syntax-highlightiting)
+plugins=(gitfast colored-man command-not-found cp dirhistory sudo zsh-autosuggestions zsh-syntax-highlightiting)
 
 # Runs the shell command
 source $ZSH/oh-my-zsh.sh

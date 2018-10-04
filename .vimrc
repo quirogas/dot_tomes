@@ -27,12 +27,12 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_mode_map = {
-      \ 'n'  : "\ue28b  عادي", 
-      \ 'i'  : "\ufb4e インサート", 
-      \ 'r'  : "\ufbd2 更換", 
-      \ 'R'  : "\ufbd2 更換", 
-      \ 'v'  : "\ufbce 비쥬얼", 
-      \ 'V'  : "\ufbce 비쥬얼",
-      \ '' : "\ufbce 비쥬얼",
+      \ 'n'  : "\ue28b ", 
+      \ 'i'  : "\ufb4e ", 
+      \ 'r'  : "\ufbd2 ", 
+      \ 'R'  : "\ufbd2 ", 
+      \ 'v'  : "\ufbce ", 
+      \ 'V'  : "\ufbce ",
+      \ '' : "\ufbce ",
       \ }
 
