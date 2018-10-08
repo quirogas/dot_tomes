@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 "Key bindings
@@ -25,6 +26,15 @@ syntax on
 set number 
 color dracula
 set t_Co=256
+
+
+"less agressive eslint set up
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+"prettier config
+let g:prettier#autoformat = 1
 
 "Airline configuration
 let g:airline_powerline_fonts = 1
