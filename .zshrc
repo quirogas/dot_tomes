@@ -11,7 +11,7 @@ alias start="bip2 && app & slack && chrome"
 alias eos="ssh quirogas@eos02.cis.gvsu.edu"
 alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias cdmite="cd /Users/unclear/Desktop/Programing/Atom/mite-check-app"
-alias cdwizar="cd /Users/unclear/Desktop/GVSU/TA"
+alias cdwizard="cd /Users/unclear/Desktop/GVSU/TA"
 
 export DEFAULT_USER="unclear"
 export TERM="xterm-256color"
@@ -64,7 +64,7 @@ COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
 # /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
-plugins=(gitfast colored-man command-not-found cp dirhistory sudo zsh-autosuggestions zsh-syntax-highlightiting)
+plugins=(gitfast colored-man command-not-found cp dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
 
 # Runs the shell command
 source $ZSH/oh-my-zsh.sh
