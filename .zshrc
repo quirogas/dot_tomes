@@ -12,6 +12,7 @@ alias eos="ssh quirogas@eos02.cis.gvsu.edu"
 alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias cdmite="cd /Users/unclear/Desktop/Programing/Atom/mite-check-app"
 alias cdwizard="cd /Users/unclear/Desktop/GVSU/TA"
+alias cdcis="cd /Users/unclear/Documents/CIS"
 
 export DEFAULT_USER="unclear"
 export TERM="xterm-256color"
