@@ -27,6 +27,14 @@ set number
 color dracula
 set t_Co=256
 
+"autocmnd groups 
+
+augroup numbertoggle "toggles between relative and absolute line numbers. 
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber   "relative during NORMAL mode 
+	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber "abosulute during INSERT mode
+augroup END
+
 
 "less agressive eslint set up
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
