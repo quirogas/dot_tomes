@@ -13,6 +13,8 @@ alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yel
 alias cdmite="cd /Users/unclear/Desktop/Programing/Atom/mite-check-app"
 alias cdwizard="cd /Users/unclear/Desktop/GVSU/TA"
 alias cdcis="cd /Users/unclear/Documents/CIS"
+alias cdpollen="/Users/unclear/Desktop/Programing/Atom/PollenCheck"
+alias cdpacman="/Users/unclear/Desktop/Programing/Pacman"
 
 export DEFAULT_USER="unclear"
 export TERM="xterm-256color"
@@ -89,3 +91,7 @@ man() {
     col -b | \
     vim -R -c 'set ft=man nomod nolist' -
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
