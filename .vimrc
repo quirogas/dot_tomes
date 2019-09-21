@@ -28,7 +28,6 @@ color dracula
 set t_Co=256
 
 "autocmnd groups 
-
 augroup numbertoggle "toggles between relative and absolute line numbers. 
 	autocmd!
 	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber   "relative during NORMAL mode 
@@ -37,12 +36,19 @@ augroup END
 
 
 "less agressive eslint set up
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-let g:ale_sign_warning = '.'
+let g:ale_sign_error = '✘' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
 "prettier config
-let g:prettier#autoformat = 1
+"when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
 
 "Airline configuration
 let g:airline_powerline_fonts = 1
