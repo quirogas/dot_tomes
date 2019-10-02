@@ -3,11 +3,6 @@ export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/
 
 
 #List of aliases
-alias app="docker-compose up & ./build.py webpack:watch:hive_scales"
-alias bip2="cdbip2 && atom ."
-alias chrome="cd /Applications && open Google\ Chrome.app --args "https://github.com/BeeInformedPartnership/bip2" --app "http://localhost:3000/hive-scales-dev#/""
-alias slack="cd /Applications && open Slack.app"
-alias start="bip2 && app & slack && chrome"
 alias eos="ssh quirogas@eos02.cis.gvsu.edu"
 alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias cdmite="cd /Users/unclear/Desktop/Programing/Atom/mite-check-app"
