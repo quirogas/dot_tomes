@@ -12,8 +12,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
