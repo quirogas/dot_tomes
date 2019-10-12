@@ -22,6 +22,9 @@ call plug#end()
 
 "Key bindings
 map <C-n> :NERDTreeToggle<CR>
+map <S-n> :bnext<CR>
+map <S-b> :bprev<CR>
+map <S-q> :bdelete<CR>
 
 "Manual config
 syntax on
