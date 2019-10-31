@@ -5,12 +5,12 @@ export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/
 #List of aliases
 alias eos="ssh quirogas@eos02.cis.gvsu.edu"
 alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias cdmite="cd /Users/unclear/Desktop/Programing/Atom/mite-check-app"
-alias cdwizard="cd /Users/unclear/Desktop/GVSU/TA"
-alias cdcis="cd /Users/unclear/Documents/CIS"
-alias cdpollen="/Users/unclear/Desktop/Programing/Atom/PollenCheck"
-alias cdweekend="Users/unclear/Documents/citizen_labs"
-alias cddot="/Users/unclear/dot_tomes"
+alias cdmite=" /Users/unclear/Desktop/Programing/Atom/mite-check-app"
+alias cdwizard=" /Users/unclear/Desktop/GVSU/TA"
+alias cdcis=" /Users/unclear/Documents/CIS"
+alias cdpollen=" /Users/unclear/Desktop/Programing/Atom/PollenCheck"
+alias cdweekend=" /Users/unclear/Documents/citizen_labs"
+alias cddot=" /Users/unclear/dot_tomes"
 
 export DEFAULT_USER="unclear"
 export TERM="xterm-256color"
