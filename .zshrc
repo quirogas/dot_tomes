@@ -1,5 +1,6 @@
 # Genymotion Path 
 export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/
+export PATH=~/.poetry/bin:$PATH
 
 
 #List of aliases
@@ -91,3 +92,8 @@ export NVM_DIR="$HOME/.nvm"
 
 #fuzzy finder config file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
