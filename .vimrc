@@ -17,7 +17,6 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "Key bindings
