@@ -1,22 +1,19 @@
-# Genymotion Path 
-export PATH=$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/
-export PATH=~/.poetry/bin:$PATH
-
-
-#List of aliases
-alias eos="ssh quirogas@eos02.cis.gvsu.edu"
-alias log="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias cdmite=" /Users/unclear/Desktop/Programing/Atom/mite-check-app"
-alias cdwizard=" /Users/unclear/Desktop/GVSU/TA"
-alias cdcis=" /Users/unclear/Documents/CIS"
-alias cdpollen=" /Users/unclear/Desktop/Programing/Atom/PollenCheck"
-alias cdweekend=" /Users/unclear/Documents/citizen_labs"
-alias cddot=" /Users/unclear/dot_tomes"
-
-export DEFAULT_USER="unclear"
+#
+# Path exports
+export DEFAULT_USER="quirogas"
 export TERM="xterm-256color"
-export ZSH=/Users/unclear/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters"
 
+# HIghlight path
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# List of aliases
+alias cddot="cd $HOME/dot_tomes"
+alias cdlearn="cd $HOME/Documents/Rust_learning"
+alias cdvrops="cd $HOME/Documents/vrops-architect"
+
+# Theme and mode
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
@@ -67,14 +64,6 @@ HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 ENABLE_CORRECTION="true"
 
-# /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
-plugins=(gitfast colored-man command-not-found cp dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
-
-# Runs the shell command
-source $ZSH/oh-my-zsh.sh
-
-#location of the zsh highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
@@ -86,14 +75,33 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
 
+
+# /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
+plugins=(gitfast colored-man command-not-found cp dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
+
+
+# source stuff 
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+
+# nvm 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#fuzzy finder config file
+# fuzzy finder 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+#Better history searching with arrow keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
+export PATH="$HOME/.cargo/bin:$PATH"
