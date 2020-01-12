@@ -80,6 +80,10 @@ ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# zsh advanced tab completion 
+autoload -U compinit
+compinit
+
 # nvm 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
