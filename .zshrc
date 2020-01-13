@@ -1,17 +1,22 @@
-#
 # Path exports
-export DEFAULT_USER="quirogas"
+export DEFAULT_USER=$USER
 export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters"
 
+#path fix
+PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+export PATH
+
 # HIghlight path
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# List of aliases
 alias cddot="cd $HOME/dot_tomes"
 alias cdlearn="cd $HOME/Documents/Rust_learning"
 alias cdvrops="cd $HOME/Documents/vrops-architect"
+alias :q="exit"
+alias :w="cargo check"
+alias :x="cargo run"
+alias vim="nvim"
 
 # Theme and mode
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -39,9 +44,6 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='233'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='48'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='202'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='229'
-
-
-POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
 POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='black'
 POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='178'
@@ -77,11 +79,12 @@ ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
 
 
 # /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
-plugins=(gitfast colored-man command-not-found cp dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
+plugins=(gitfast colored-man command-not-found cp colorize dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
 
 
 # source stuff 
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # nvm 
 export NVM_DIR="$HOME/.nvm"
@@ -103,5 +106,9 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+#Advanced Tab completion 
+autoload -U compinit
+compinit
 
 export PATH="$HOME/.cargo/bin:$PATH"
