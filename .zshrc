@@ -7,6 +7,7 @@ alias cddot="cd $HOME/dot_tomes"
 alias cdcap="cd $HOME/Documents/CIS-467"
 alias eos="ssh quirogas@eos01.cis.gvsu.edu"
 alias vim="nvim"
+alias vi="nvim"
 alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 # Theme and mode
