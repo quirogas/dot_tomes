@@ -3,9 +3,12 @@ export DEFAULT_USER=$USER
 export TERM="xterm-256color"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters"
+export EDITOR=nvim
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
 
 #path fix
-PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+PATH=~/bin:/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH
 
 # HIghlight path
@@ -112,3 +115,4 @@ autoload -U compinit
 compinit
 
 export PATH="$HOME/.cargo/bin:$PATH"
+eval "$(rbenv init -)"

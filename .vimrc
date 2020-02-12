@@ -16,12 +16,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'rust-lang/rust.vim' 
+Plug 'rust-lang/rust.vim'
 Plug 'sebastianmarkow/deoplete-rust'
 call plug#end()
 
@@ -33,34 +33,25 @@ map <S-q> :bdelete<CR>
 
 "Manual config
 syntax on
-set number 
+set number
 color dracula
 set t_Co=256
 
-"persistent undo 
-set undofile 
+"persistent undo
+set undofile
 set undodir=~/.vim/undodir
 
-"autocmnd groups 
-augroup numbertoggle "toggles between relative and absolute line numbers. 
-	autocmd!
-	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber   "relative during NORMAL mode 
-	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber "abosulute during INSERT mode
-augroup END
-
-
-"less agressive eslint set up
+"ale config
 let g:ale_sign_error = '✘' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '⚠'
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
-let g:ale_linters = {
-			\   'rust': [
-			\'rls',
-			\'cargo', 
-			\'rustc'
-			\   ],
-			\}
+let g:ale_linters = {'rust': ['rls']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
+\}
+let g:deoplete#enable_at_startup = 1
 
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
@@ -72,16 +63,23 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+"vim line toggling between absolute and relative
+augroup numbertoggle "toggles between relative and absolute line numbers.
+       autocmd!
+       autocmd BufEnter,FocusGained,InsertLeave * set relativenumber   "relative during NORMAL mode
+       autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber "abosulute during INSERT mode
+augroup END
+
 
 "Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_mode_map = {
-			\ 'n'  : "\ue28b ", 
-			\ 'i'  : "\ufb4e ", 
-			\ 'r'  : "\ufbd2 ", 
-			\ 'R'  : "\ufbd2 ", 
-			\ 'v'  : "\ufbce ", 
+			\ 'n'  : "\ue28b ",
+			\ 'i'  : "\ufb4e ",
+			\ 'r'  : "\ufbd2 ",
+			\ 'R'  : "\ufbd2 ",
+			\ 'v'  : "\ufbce ",
 			\ 'V'  : "\ufbce ",
 			\ '' : "\ufbce ",
 			\ }
@@ -114,23 +112,23 @@ let g:fzf_action = {
 " - down / up / left / right
 let g:fzf_layout = { 'down': '~40%' }
 
-" use deople
+" use deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#rust#racer_binary="$HOME/.cargo/bin/racer"
 
-"deoplete tab completion 
+"deoplete tab completion
+
+let g:deoplete#sources#rust#rust_source_path='/Users/ccheek/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src'
 function! s:check_back_space() abort "{{{
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
-inoremap <silent><expr> <TAB>
+noremap <silent><expr> <TAB>
 			\ pumvisible() ? "\<C-n>" :
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ deoplete#manual_complete()
 
-"Easier split navigation 
+"Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
