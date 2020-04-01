@@ -11,7 +11,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
@@ -26,10 +25,15 @@ Plug 'sebastianmarkow/deoplete-rust'
 call plug#end()
 
 "Key bindings
-map <C-n> :NERDTreeToggle<CR>
 map <S-n> :bnext<CR>
 map <S-b> :bprev<CR>
 map <S-q> :bdelete<CR>
+
+"Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "Manual config
 syntax on
@@ -127,8 +131,3 @@ noremap <silent><expr> <TAB>
 			\ <SID>check_back_space() ? "\<TAB>" :
 			\ deoplete#manual_complete()
 
-"Easier split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>

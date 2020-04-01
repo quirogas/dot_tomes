@@ -16,6 +16,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias cddot="cd $HOME/dot_tomes"
 alias cdlearn="cd $HOME/Documents/Rust_learning"
 alias cdvrops="cd $HOME/Documents/vrops-architect"
+alias cddeploy="cd $HOME/Documents/vrops-deploy"
 alias :q="exit"
 alias :w="cargo check"
 alias :x="cargo run"
@@ -25,7 +26,7 @@ alias vim="nvim"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-#Sets the icon for the home directory and unknown drectories. 
+#Sets the icon for the home directory and unknown drectories.
 POWERLEVEL9K_FOLDER_ICON="\ue62e"
 POWERLEVEL9K_HOME_SUB_ICON="\ufd23"
 POWERLEVEL9K_DIR_PATH_SEPARATOR="  "
@@ -85,16 +86,16 @@ ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
 plugins=(gitfast colored-man command-not-found cp colorize dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
 
 
-# source stuff 
+# source stuff
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# nvm 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# fuzzy finder 
+# fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pyenv
@@ -110,7 +111,7 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-#Advanced Tab completion 
+#Advanced Tab completion
 autoload -U compinit
 compinit
 
