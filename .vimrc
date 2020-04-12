@@ -24,11 +24,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'sebastianmarkow/deoplete-rust'
 call plug#end()
 
-"Key bindings
-map <S-n> :bnext<CR>
-map <S-b> :bprev<CR>
-map <S-q> :bdelete<CR>
-
 "Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
