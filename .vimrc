@@ -37,6 +37,7 @@ set t_Co=256
 "persistent undo
 set undofile
 set undodir=~/.vim/undodir
+set autoread
 
 "ale config
 let g:ale_sign_error = '✘' " Less aggressive than the default '>>'
