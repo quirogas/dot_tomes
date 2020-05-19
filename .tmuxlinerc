@@ -1,6 +1,7 @@
 # This tmux statusbar config was created by tmuxline.vim
 # on Mon, 24 Oct 2016
 
+set -s escape-time 0
 set -g status-bg "colour59"
 set -g status-justify "left"
 set -g status-left-length "100"

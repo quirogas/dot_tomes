@@ -31,6 +31,8 @@ nnoremap <C-H> <C-W><C-H>
 "Manual config
 syntax on
 set number
+set spelllang=en
+set spell
 color dracula
 set t_Co=256
 
@@ -38,6 +40,9 @@ set t_Co=256
 set undofile
 set undodir=~/.vim/undodir
 set autoread
+
+"ESC delay
+set timeoutlen=1000 ttimeoutlen=0
 
 "ale config
 let g:ale_sign_error = '✘' " Less aggressive than the default '>>'

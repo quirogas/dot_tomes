@@ -81,6 +81,9 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
 
+# 10ms for key sequences
+KEYTIMEOUT=1
+
 
 # /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
 plugins=(gitfast colored-man command-not-found cp colorize dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
