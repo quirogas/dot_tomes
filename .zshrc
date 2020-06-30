@@ -21,6 +21,10 @@ alias :q="exit"
 alias :w="cargo check"
 alias :x="cargo run"
 alias vim="nvim"
+alias gitsub="git submodule update --init"
+alias lookect='exuno build && exuno collect --to protobuf | exuno view'
+alias collect='exuno build && exuno collect'
+alias test='exuno build && exuno test'
 
 # Theme and mode
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -120,3 +124,5 @@ compinit
 
 export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv-virtualenv init -)"
