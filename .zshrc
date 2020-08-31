@@ -26,6 +26,7 @@ alias gitsub="git submodule update --init"
 alias lookect='exuno build && exuno collect --to protobuf | exuno view'
 alias collect='exuno build && exuno collect'
 alias test='exuno build && exuno test'
+alias clone="clone --recursive"
 
 # Theme and mode
 ZSH_THEME="powerlevel9k/powerlevel9k"
